@@ -6,15 +6,15 @@ var elementPadding = 40; // padding around the logo and credit text
 // the name of the logo object should match the value of the corresponding radio button in the HTML.
 var logos = {
     'lunchbox': {
-        whitePath: '../img/wbur_white.svg', // path to white logo
-        blackPath: '../img/wbur_black.svg', // path to black logo
+        whitePath: 'https://d3kwtionx0p7im.cloudfront.net/images/waterbug/wbur_white.svg', // path to white logo
+        blackPath: 'https://d3kwtionx0p7im.cloudfront.net/images/waterbug/wbur_black.svg', // path to black logo
         w: 125, // width of logo
         h: 39, // height of logo
         display: 'WBUR'
     },
     'socializr': {
-        whitePath: '../img/wbur909_white.svg',
-        blackPath: '../img/wbur909_black.svg',
+        whitePath: 'https://d3kwtionx0p7im.cloudfront.net/images/waterbug/wbur909_white.svg',
+        blackPath: 'https://d3kwtionx0p7im.cloudfront.net/images/waterbug/wbur909_black.svg',
         w: 153,
         h: 46,
         display: 'with tagline'
@@ -86,5 +86,5 @@ var currentCrop = 'twitter'; // default crop size
 var currentLogo = 'lunchbox'; // default logo slug
 var currentLogoColor = 'white'; // default logo color
 var currentTextColor = 'white'; // default text color
-var defaultImage = '../img/test-kitten.jpg'; // path to image to load as test image
+var defaultImage = 'https://d3kwtionx0p7im.cloudfront.net/images/waterbug/test-kitten.jpg'; // path to image to load as test image
 var defaultLogo = logos[currentLogo]['whitePath'] // path to default logo
