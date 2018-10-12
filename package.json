@@ -2,8 +2,8 @@
   "name": "lunchbox",
   "version": "1.0.0",
   "dependencies": {
-    "electron-packager": "~5.0.1",
     "electron-builder": "~2.0.0",
+    "electron-packager": "~5.0.1",
     "less": "~1.7.0"
   },
   "scripts": {
@@ -16,5 +16,8 @@
     "pack": "npm run build && npm run pack:osx && npm run pack:win",
     "pack:osx": "electron-builder electron/Lunchbox-darwin-x64/Lunchbox.app --platform=osx --config=packager-config.json",
     "pack:win": "electron-builder electron/Lunchbox-win32-ia32 --platform=win --config=packager-config.json"
+  },
+  "devDependencies": {
+    "inliner": "^1.13.1"
   }
 }

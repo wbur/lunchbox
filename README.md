@@ -276,3 +276,19 @@ Additional contributors:
 - [Chris Barna](https://github.com/ctbarna)
 - [David Ryan](https://github.com/dryanmedia)
 - [Davis Shaver](https://github.com/davisshaver)
+
+
+
+## HOW TO DEPLOY FOR WBUR
+
+* To compile, run 'fab render'. Files will be in /www/quotable/index.html, /www/factlist/index.html and www/waterbug/index.html
+
+* Get [inliner](https://github.com/remy/inliner) `npm install inliner`
+
+* Generate the single-file inliner version and overwrite the API's version of quotable:
+ `inliner -m --skip-absolute-urls www/quotable/index.html > inlined/quotable/index.html`
+ `inliner -m --skip-absolute-urls www/factlist/index.html > inlined/factlist/index.html`
+ `inliner -m --skip-absolute-urls www/waterbug/index.html > inlined/waterbug/index.html`
+
+Copy files into config-api/resources/views/tools/content/quotable/
+
