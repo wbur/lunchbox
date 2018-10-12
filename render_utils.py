@@ -61,7 +61,7 @@ class Includer(object):
                 timestamp_path = g.compiled_includes[path]
             else:
                 # Add a querystring to the rendered filename to prevent caching
-                timestamp_path = '%s?%i' % (path, int(time.time()))
+                timestamp_path = '%s' % (path)
 
                 out_path = 'www/%s' % path
 
