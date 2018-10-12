@@ -25,19 +25,34 @@ var quotes = [
         "size": 65
     },
     {
-        "quote": "Annyong.",
-        "source": "Annyong",
-        "size": 90
-    },
-    {
-        "quote": "STEVE HOLT!",
-        "source": "Steve Holt",
-        "size": 65
-    },
-    {
         "quote": "Whoa, whoa, whoa. There's still plenty of meat on that bone. Now you take this home, throw it in a pot, add some broth, a potato. Baby, you've got a stew going.",
         "source": "Carl Weathers",
         "size": 40
+    },
+    {
+        "quote":"Go to Heaven for the climate, Hell for the company.",
+        "source":"Mark Twain",
+        "size":60
+    },
+    {
+        "quote":"Well, Art is Art, isn't it? Still, on the other hand, water is water. And east is east and west is west and if you take cranberries and stew them like applesauce they taste much more like prunes than rhubarb does. Now you tell me what you know.",
+        "source":"Groucho Marx",
+        "size":30
+    },
+    {
+        "quote":"My fake plants died because I did not pretend to water them.",
+        "source":"Mitch Hedberg",
+        "size":44
+    },
+    {
+        "quote":"I love deadlines. I like the whooshing sound they make as they fly by.",
+        "source":"Douglas Adams",
+        "size":44
+    },
+    {
+        "quote":"Don't trust everything you read on the internets.",
+        "source":"Abraham Lincoln",
+        "size":60
     }
 ];
 
@@ -123,7 +138,7 @@ $(function() {
     $text = $('.poster blockquote p, .source');
     $save = $('#save');
     $poster = $('.poster');
-    $themeButtons = $('#theme .btn');
+    $themePullDown = $('#theme');
     $aspectRatioButtons = $('#aspect-ratio .btn');
     $fontSize = $('#fontsize');
     $show = $('#show');
@@ -142,11 +157,11 @@ $(function() {
 
     $save.on('click', saveImage);
 
-    $themeButtons.on('click', function() {
-        $themeButtons.removeClass().addClass('btn btn-primary');
-        $(this).addClass('active');
-        $poster.removeClass('poster-theme1 poster-theme2 poster-theme3 poster-theme4')
-                    .addClass('poster-' + $(this).attr('id'));
+    $themePullDown.on('change', function() {
+        $poster.removeClass(function (index, className) {
+            return (className.match (/(^|\s)poster-\S+/g) || []).join(' ');
+        })
+                .addClass('poster-' + $(this).val());
     });
 
     $aspectRatioButtons.on('click', function() {
