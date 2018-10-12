@@ -6,18 +6,18 @@ var elementPadding = 40; // padding around the logo and credit text
 // the name of the logo object should match the value of the corresponding radio button in the HTML.
 var logos = {
     'lunchbox': {
-        whitePath: '../img/icon-lunchbox-white.svg', // path to white logo
-        blackPath: '../img/icon-lunchbox-black.svg', // path to black logo
-        w: 100, // width of logo
-        h: 80, // height of logo
-        display: 'Lunchbox'
+        whitePath: '../img/wbur_white.svg', // path to white logo
+        blackPath: '../img/wbur_black.svg', // path to black logo
+        w: 125, // width of logo
+        h: 39, // height of logo
+        display: 'WBUR'
     },
     'socializr': {
-        whitePath: '../img/icon-socializr-white.svg',
-        blackPath: '../img/icon-socializr-black.svg',
-        w: 150,
-        h: 51,
-        display: 'Socializr'
+        whitePath: '../img/wbur909_white.svg',
+        blackPath: '../img/wbur909_black.svg',
+        w: 153,
+        h: 46,
+        display: 'with tagline'
     }
 };
 
@@ -35,7 +35,7 @@ var fontShadowOffsetY = 0; // font shadow offset y
 var fontShadowBlur = 10; // font shadow blur
 
 // copyright options
-var orgName = 'Your News Organization';
+var orgName = 'WBUR';
 var freelanceString = 'for ' + orgName;
 
 var copyrightOptions = {
