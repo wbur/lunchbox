@@ -2,7 +2,7 @@ var $text = null;
 var $factList = null;
 var $save = null;
 var $poster = null;
-var $themeButtons = null;
+var $themePullDown = null;
 var $aspectRatioButtons = null;
 var $fontSize = null;
 var $timestamp = null;
@@ -22,7 +22,7 @@ var onDocumentLoad = function() {
     $factList = $('.poster blockquote');
     $save = $('#save');
     $poster = $('.poster');
-    $themeButtons = $('#theme .btn');
+    $themePullDown = $('#theme');
     $aspectRatioButtons = $('#aspect-ratio .btn');
     $fontSize = $('#fontsize');
     $timestamp = $('.timestamp');
@@ -33,7 +33,7 @@ var onDocumentLoad = function() {
     $updateTime = $('#update-time');
 
     $save.on('click', saveImage);
-    $themeButtons.on('click', onThemeClick);
+    $themePullDown.on('change', onThemeChange);
     $aspectRatioButtons.on('click', onAspectRatioClick);
     $timestampToggleButtons.on('click', onTimestampToggleClick);
     $fontSize.on('change', adjustFontSize);
@@ -158,11 +158,11 @@ var adjustFontSize = function(e, size) {
 /*
  * Select a poster theme
  */
-var onThemeClick = function(e) {
-    $themeButtons.removeClass().addClass('btn btn-primary');
-    $(this).addClass('active');
-    $poster.removeClass('poster-theme1 poster-theme2 poster-theme3 poster-theme4')
-                .addClass('poster-' + $(this).attr('id'));
+var onThemeChange = function(e) {
+    $poster.removeClass(function (index, className) {
+            return (className.match (/(^|\s)poster-\S+/g) || []).join(' ');
+        })
+                .addClass('poster-' + $(this).val());
 }
 
 /*

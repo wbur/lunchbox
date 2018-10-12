@@ -175,85 +175,6 @@ canvas {
     overflow: hidden;
     color: @text-color;
 
-    &.poster-theme1 {
-        background: @bg-color;
-        color: @text-color;
-        .logo-wrapper {
-            background-image: @logo-path;
-            background-repeat: no-repeat;
-            background-size: @logo-sq-width @logo-sq-height;
-            width: @logo-sq-width + @padding;
-            height: @logo-sq-height + @padding;
-
-            .sixteen-by-nine& {
-                background-size: @logo-16x9-width @logo-16x9-height;
-                width: @logo-16x9-width + @padding;
-                height: @logo-16x9-height + @padding;
-            }
-        }
-    }
-
-    &.poster-theme2 {
-        background: @theme2-bg-color;
-        color: @theme2-text-color;
-        .logo-wrapper {
-            background: @theme2-bg-color;
-            color: @theme2-text-color;
-            background-image: @theme2-logo-path;
-            background-repeat: no-repeat;
-            background-size: @theme2-sq-logo-width @theme2-sq-logo-height;
-            width: @theme2-sq-logo-width + @padding;
-            height: @theme2-sq-logo-height + @padding;
-
-            .sixteen-by-nine& {
-                background-size: @theme2-16x9-logo-width @theme2-16x9-logo-height;
-                width: @theme2-16x9-logo-width + @padding;
-                height: @theme2-16x9-logo-height + @padding;
-            }
-        }
-    }
-
-
-    &.poster-theme3 {
-        background: @theme3-bg-color;
-        color: @theme3-text-color;
-        .logo-wrapper {
-            background: @theme3-bg-color;
-            color: @theme3-text-color;
-            background-image: @theme3-logo-path;
-            background-repeat: no-repeat;
-            background-size: @theme3-sq-logo-width @theme3-sq-logo-height;
-            width: @theme3-sq-logo-width + @padding;
-            height: @theme3-sq-logo-height + @padding;
-
-            .sixteen-by-nine& {
-                background-size: @theme3-16x9-logo-width @theme3-16x9-logo-height;
-                width: @theme3-16x9-logo-width + @padding;
-                height: @theme3-16x9-logo-height + @padding;
-            }          
-        }
-    }
-
-    &.poster-theme4 {
-        background: @theme4-bg-color;
-        color: @theme4-text-color;
-        .logo-wrapper {
-            background: @theme4-bg-color;
-            color: @theme4-text-color;
-            background-image: @theme4-logo-path;
-            background-repeat: no-repeat;
-            background-size: @theme4-sq-logo-width @theme4-sq-logo-height;
-            width: @theme4-sq-logo-width + @padding;
-            height: @theme4-sq-logo-height + @padding;
-
-            .sixteen-by-nine& {
-                background-size: @theme4-16x9-logo-width @theme4-16x9-logo-height;
-                width: @theme4-16x9-logo-width + @padding;
-                height: @theme4-16x9-logo-height + @padding;
-            }
-        }
-    }
-
 
     &.sixteen-by-nine {
         height: 360px;
@@ -270,17 +191,6 @@ canvas {
             margin-bottom: 20px;
         }
 
-        .logo-wrapper {
-            padding: @padding;
-
-            img {
-                width: 150px;
-            }
-
-            .poster-music& {
-                padding-bottom: @padding - 10;
-            }
-        }
     }
 
     h2 {
@@ -355,28 +265,23 @@ canvas {
 
     .logo-wrapper {
         position: absolute;
-        width: 100%;
         z-index: 100;
-        bottom: 0;
-        right: 0;
+        bottom: 45px;
+        right: 60px;
         text-align: right;
-        padding:  @padding @padding * 2 @padding * 2;
+        padding:  0;
         margin: 0;
         font-size: 46px;
-        background: @bg-color;
-        background-image: @logo-path;
-        background-repeat: no-repeat;
-        background-size: @logo-sq-width @logo-sq-height;
-        width: @logo-sq-width + @padding;
-        height: @logo-sq-height + @padding;
+        width: 250px;
 
         .sixteen-by-nine& {
-            background-size: @logo-16x9-width @logo-16x9-height;
-            width: @logo-16x9-width + @padding;
-            height: @logo-16x9-height + @padding;
+            width: 250px;
+            bottom: 20px;
+            right: 20px;
         }
 
         .logo {
+            max-width: 100%;
             .hide;
         }
     }
