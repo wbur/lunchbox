@@ -18,6 +18,13 @@ var logos = {
         w: 153,
         h: 46,
         display: 'with tagline'
+    },
+    'hereandnow': {
+        whitePath: 'https://d3kwtionx0p7im.cloudfront.net/images/waterbug/icon-han-white.png',
+        blackPath: 'https://d3kwtionx0p7im.cloudfront.net/images/waterbug/icon-han-black.png',
+        w: 151,
+        h: 75,
+        display: 'H&N'
     }
 };
 
