@@ -278,12 +278,17 @@ Additional contributors:
 - [Davis Shaver](https://github.com/davisshaver)
 
 
+## Adding Waterbug Logos for WBUR
 
-## HOW TO DEPLOY FOR WBUR
+This fork handles logos as base64 encoded strings rather than inline images. This is due to how CORS works with `<canvas>`. For new logos or changes to logos for Waterbug, use an online tool such as [b64.io](http://b64.io/) to generate the base64 string and replace the `whitePath` or `blackPath` values in `waterbug-config.js`.
 
-* To compile, run 'fab render'. Files will be in /www/quotable/index.html, /www/factlist/index.html and www/waterbug/index.html
+## Inlining html files 
 
-* Get [inliner](https://github.com/remy/inliner) `npm install inliner`
+To deploy to tools.wbur.org, you must generate a single inline html file. 
+
+* Make sure you have [inliner](https://github.com/remy/inliner) installed: `npm install inliner -g`
+
+* Next, compile the latest changes by running 'fab render'. Files will be in /www/quotable/index.html, /www/factlist/index.html and www/waterbug/index.html.
 
 * Generate the single-file inliner version and overwrite the API's version of quotable:
 
@@ -293,5 +298,10 @@ inliner -m --skip-absolute-urls www/factlist/index.html > inlined/factlist/index
 inliner -m --skip-absolute-urls www/waterbug/index.html > inlined/waterbug/index.html
 ```
 
-Copy files into config-api/resources/views/tools/content/quotable/
+* Finally, copy the newly generated inline files and overwrite the version within the config-api repo:
 
+```
+config-api/resources/views/tools/content/quotable/index.html
+config-api/resources/views/tools/content/waterbug/index.html
+config-api/resources/views/tools/content/factlist/index.html
+```

@@ -396,9 +396,11 @@ var onImageLoad = function(e) {
 */
 var loadLogo = function() {
     if (currentLogoColor === 'white') {
-        logo.src = logos[currentLogo]['whitePath'];
+        logo.setAttribute('src', logos[currentLogo]['whitePath']);
+        //logo.src = logos[currentLogo]['whitePath'];
     } else {
-        logo.src = logos[currentLogo]['blackPath'];
+        logo.setAttribute('src', logos[currentLogo]['blackPath']);
+        //logo.src = logos[currentLogo]['blackPath'];
     }
     disableLogo();
 }
