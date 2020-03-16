@@ -1,6 +1,8 @@
 *.py[co]
 *.sw[op]
 
+package-lock.json
+
 # Packages
 *.egg
 *.egg-info
