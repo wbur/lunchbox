@@ -151,7 +151,7 @@ canvas {
 
         .quote& {
             .left-quote {
-                top: @padding;
+                top: @padding * 4;
                 left: @padding;
             }
         }
@@ -174,7 +174,7 @@ canvas {
             content:@quote-begin-symbol;
             display: block;
             position: absolute;
-            top: @padding * 2;
+            top: @padding * 5;
             left: @padding * 2;
             font-weight: @quote-font-weight;
             margin-left: @quote-mark-margin;
@@ -187,7 +187,7 @@ canvas {
     }
 
     blockquote {
-        padding: 0;
+        padding: @padding * 3 0 0;
         margin: 0 0 @line-height * 2;
         border-left: none;
         font-size: inherit;
@@ -257,22 +257,22 @@ canvas {
     .logo-wrapper {
         position: absolute;
         z-index: 100;
-        bottom: 45px;
-        right: 60px;
+        top: @padding * 1.5;
+        left: @padding * 1.5;
         text-align: right;
         padding:  0;
         margin: 0;
         font-size: 46px;
-        width: 250px;
+        width: 160px;
 
         .sixteen-by-nine& {
-            width: 250px;
-            bottom: 20px;
-            right: 20px;
+            width: 160px;
+            top: @padding;
+            left: 20px;
         }
 
         .logo {
-            width: 250px;
+            width: 160px;
             .hide;
         }
     }
